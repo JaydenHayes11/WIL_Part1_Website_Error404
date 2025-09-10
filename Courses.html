@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering The Nation - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Empowering The Nation</h2>
+            </div>
+            <div class="flex-shrink-0 flex items-left">
+                <img src="placeholder.png" alt="Logo" class="h-15 w-auto">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Courses.html" class="nav-link active">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Begin to Learn</h1>
+                <p>Find out what we offer</p>
+            </div>
+        </section>
+      </div>
+    </header>
+
+    <!-- Course Categories -->
+    <section style="padding: 4rem 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+          <div class="card" style="text-align: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="2" style="margin: 0 auto 1rem;">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+            <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: hsl(var(--primary));">Six-Week Courses</h3>
+            <p style="color: hsl(var(--muted-foreground)); margin-bottom: 1rem;">
+              Intensive short-term programs focusing on essential life skills and basic professional training.
+            </p>
+            <div style="font-size: 1.125rem; font-weight: 600; color: hsl(var(--primary));">R1,500 per course</div>
+          </div>
+          
+          <div class="card" style="text-align: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="2" style="margin: 0 auto 1rem;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: hsl(var(--primary));">Six-Month Courses</h3>
+            <p style="color: hsl(var(--muted-foreground)); margin-bottom: 1rem;">
+              Comprehensive professional development programs with in-depth training and certification.
+            </p>
+            <div style="font-size: 1.125rem; font-weight: 600; color: hsl(var(--primary));">R1,500 per course</div>
+          </div>
+        </div>
+
+        <!-- Course Tabs -->
+        <div style="margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+            <div style="display: flex; border: 1px solid hsl(var(--border)); border-radius: var(--radius); overflow: hidden;">
+              <button id="six-week-tab" class="tab-button btn" onclick="showCourseTab('six-week')" style="border-radius: 0; border: none; font-size: 1.125rem; padding: 0.75rem 1.5rem;">Six-Week Courses</button>
+              <button id="six-month-tab" class="tab-button btn btn-ghost" onclick="showCourseTab('six-month')" style="border-radius: 0; border: none; font-size: 1.125rem; padding: 0.75rem 1.5rem;">Six-Month Courses</button>
+            </div>
+          </div>
+
+          <!-- Six-Week Courses Tab -->
+          <div id="six-week-content" class="tab-content">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+              <div class="course-card card" style="cursor: pointer; transition: var(--transition-smooth);" onclick="selectCourse(window.courses.sixWeek[0])">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                  <span class="badge" style="margin-bottom: 0.5rem;">6 weeks</span>
+                  <span style="font-size: 1.125rem; font-weight: bold; color: hsl(var(--primary));">R1,500</span>
+                </div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.75rem;">First Aid Training</h4>
+                <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    6 weeks
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    24 max
+                  </div>
+                </div>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); line-height: 1.4;">Comprehensive first aid training covering emergency response, CPR, and basic medical care.</p>
+              </div>
+
+              <div class="course-card card" style="cursor: pointer; transition: var(--transition-smooth);" onclick="selectCourse(window.courses.sixWeek[1])">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                  <span class="badge" style="margin-bottom: 0.5rem;">6 weeks</span>
+                  <span style="font-size: 1.125rem; font-weight: bold; color: hsl(var(--primary));">R1,500</span>
+                </div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.75rem;">Professional Sewing</h4>
+                <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    6 weeks
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    18 max
+                  </div>
+                </div>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); line-height: 1.4;">Master professional sewing techniques, pattern making, and garment construction.</p>
+              </div>
+
+              <div class="course-card card" style="cursor: pointer; transition: var(--transition-smooth);" onclick="selectCourse(window.courses.sixWeek[2])">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                  <span class="badge" style="margin-bottom: 0.5rem;">6 weeks</span>
+                  <span style="font-size: 1.125rem; font-weight: bold; color: hsl(var(--primary));">R1,500</span>
+                </div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.75rem;">Landscaping & Gardening</h4>
+                <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    6 weeks
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    20 max
+                  </div>
+                </div>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); line-height: 1.4;">Learn landscape design, plant care, garden maintenance, and sustainable gardening practices.</p>
+              </div>
+
+              <div class="course-card card" style="cursor: pointer; transition: var(--transition-smooth);" onclick="selectCourse(window.courses.sixWeek[3])">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                  <span class="badge" style="margin-bottom: 0.5rem;">6 weeks</span>
+                  <span style="font-size: 1.125rem; font-weight: bold; color: hsl(var(--primary));">R1,500</span>
+                </div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.75rem;">Life Skills Development</h4>
+                <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    6 weeks
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    30 max
+                  </div>
+                </div>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); line-height: 1.4;">Essential life skills including financial literacy, communication, time management, and personal development.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Six-Month Courses Tab -->
+          <div id="six-month-content" class="tab-content" style="display: none;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+              <div class="course-card card" style="cursor: pointer; transition: var(--transition-smooth);" onclick="selectCourse(window.courses.sixMonth[0])">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                  <span class="badge" style="margin-bottom: 0.5rem;">6 months</span>
+                  <span style="font-size: 1.125rem; font-weight: bold; color: hsl(var(--primary));">R7,500</span>
+                </div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.75rem;">Child Minding & Care</h4>
+                <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    6 months
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    15 max
+                  </div>
+                </div>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); line-height: 1.4;">Professional childcare training covering child development, safety, nutrition, and educational activities.</p>
+              </div>
+
+              <div class="course-card card" style="cursor: pointer; transition: var(--transition-smooth);" onclick="selectCourse(window.courses.sixMonth[1])">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                  <span class="badge" style="margin-bottom: 0.5rem;">6 months</span>
+                  <span style="font-size: 1.125rem; font-weight: bold; color: hsl(var(--primary));">R7,500</span>
+                </div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.75rem;">Professional Cooking</h4>
+                <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    6 months
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    12 max
+                  </div>
+                </div>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); line-height: 1.4;">Culinary arts training from basic cooking techniques to advanced cuisine preparation and food safety.</p>
+              </div>
+
+              <div class="course-card card" style="cursor: pointer; transition: var(--transition-smooth);" onclick="selectCourse(window.courses.sixMonth[2])">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                  <span class="badge" style="margin-bottom: 0.5rem;">6 months</span>
+                  <span style="font-size: 1.125rem; font-weight: bold; color: hsl(var(--primary));">R7,500</span>
+                </div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.75rem;">Garden Maintenance</h4>
+                <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    6 months
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    16 max
+                  </div>
+                </div>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); line-height: 1.4;">Comprehensive garden maintenance skills including pruning, pest control, equipment operation, and landscape care.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Details Section -->
+        <div id="course-details" style="margin-top: 2rem;">
+          <!-- Course details will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Empowering The Nation</h3>
+                    <p>Learn To be the change</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@EmpoweringTheNation.com</p>
+                    <p>Phone: 021 673-4528</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Empowering The Nation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+    <style>
+      .nav-link.active {
+        background: var(--gradient-primary) !important;
+        color: white !important;
+      }
+      
+      .tab-button.active {
+        background: var(--gradient-primary) !important;
+        color: white !important;
+      }
+      
+      .course-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-medium);
+      }
+      
+      .course-card.active {
+        border: 2px solid hsl(var(--primary));
+        box-shadow: var(--shadow-medium);
+      }
+      
+      @media (max-width: 768px) {
+        .mobile-menu-toggle {
+          display: flex !important;
+        }
+      }
+    </style>
+  </body>
+</html>
