@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Header styles */
+        .header {
+            background: #666;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-icon {
+            background: #888;
+            padding: 8px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .help-icon {
+            background: #888;
+            padding: 6px 8px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .language-select {
+            background: #888;
+            padding: 6px 12px;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+
+        .logo {
+            background: #888;
+            padding: 15px 30px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .sign-in {
+            background: #888;
+            padding: 6px 12px;
+            border-radius: 3px;
+        }
+
+        .user-icon {
+            background: #888;
+            padding: 8px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        /* Search bar */
+        .search-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .search-bar {
+            background: #ddd;
+            padding: 12px;
+            border-radius: 25px;
+            display: inline-block;
+            width: 300px;
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .search-input {
+            border: none;
+            background: transparent;
+            outline: none;
+            margin-left: 30px;
+            width: 200px;
+        }
+
+        /* Banner */
+        .banner {
+            background: #ccc;
+            height: 80px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+
+        /* Course sections */
+        .course-section {
+            margin: 20px;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .course-title {
+            background: #f0f0f0;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .course-carousel {
+            background: #ccc;
+            height: 80px;
+            position: relative;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .carousel-arrow.left {
+            left: 10px;
+        }
+
+        .carousel-arrow.right {
+            right: 10px;
+        }
+
+        /* Navigation */
+        .nav-breadcrumb {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Course tabs */
+        .course-tabs {
+            display: flex;
+            background: #f0f0f0;
+            margin: 0 20px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .course-tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            background: #ddd;
+            border-right: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .course-tab:last-child {
+            border-right: none;
+        }
+
+        .course-tab.active {
+            background: #f9f9f9;
+        }
+
+        /* Course content */
+        .course-content {
+            margin: 0 20px 20px 20px;
+            background: white;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .course-name {
+            background: #ddd;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .course-description {
+            background: #ccc;
+            min-height: 200px;
+            padding: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Form styles */
+        .form-section {
+            margin: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-field {
+            flex: 1;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            background: #ddd;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .courses-grid {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .course-column {
+            flex: 1;
+        }
+
+        .column-title {
+            background: #ddd;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .course-item {
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+
+        .course-checkbox {
+            margin-right: 10px;
+        }
+
+        .course-name-item {
+            flex: 1;
+            background: #ddd;
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        .course-price {
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: #555;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .footer-btn {
+            background: #888;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .footer-logo {
+            background: #777;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .social-icon {
+            background: #888;
+            padding: 8px;
+            border-radius: 3px;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+
+        /* Page navigation */
+        .page-nav {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        .page-nav button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin: 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .page-nav button.active {
+            background: #666;
+        }
+
+        .vertical-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #999;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Navigation -->
+    <div class="page-nav">
+        <button onclick="showPage(1)" class="active">Page 1</button>
+        <button onclick="showPage(2)">Page 2</button>
+        <button onclick="showPage(3)">Page 3</button>
+        <button onclick="showPage(4)">Page 4</button>
+    </div>
+
+    <!-- Page 1: Homepage -->
+    <div class="page active" id="page1">
+        <header class="header">
+            <div style="display: flex; align-items: center;">
+                <div class="menu-icon">≡</div>
+                <div class="help-icon">?</div>
+                <div class="language-select">English ▼</div>
+            </div>
+            <div class="logo">Logo</div>
+            <div style="display: flex; align-items: center;">
+                <div class="sign-in">Sign In</div>
+                <div class="user-icon">👤</div>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="">
+            </div>
+        </div>
+
+        <div class="banner"></div>
+
+        <div class="course-section">
+            <div class="course-title">Six-Month Courses</div>
+            <div class="course-carousel">
+                <button class="carousel-arrow left">‹</button>
+                <button class="carousel-arrow right">›</button>
+            </div>
+        </div>
+
+        <div class="course-section">
+            <div class="course-title">Six-Week Courses</div>
+            <div class="course-carousel">
+                <button class="carousel-arrow left">‹</button>
+                <button class="carousel-arrow right">›</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-nav">
+                <button class="footer-btn">Prices</button>
+                <button class="footer-btn">Venues/<br>Locations</button>
+                <div class="footer-logo">Logo</div>
+                <button class="footer-btn">Get Certified</button>
+                <button class="footer-btn">Contact Us</button>
+            </div>
+            <div style="font-size: 12px; margin-bottom: 10px;">
+                22 Fisher Street Stiylpont<br>
+                Unit 3, Georgmade St, Ebenthulution 108 Jr,<br>
+                Germiston, 2034
+            </div>
+            <div class="social-icons">
+                <div class="social-icon">in</div>
+                <div class="social-icon">f</div>
+                <div class="social-icon">📱</div>
+                <div class="social-icon">📷</div>
+            </div>
+            <div class="footer-text">
+                Empowering the Nation is an equal opportunity site that offers the ability to learn skills to be able to use life skills no matter who you are.
+            </div>
+        </footer>
+    </div>
