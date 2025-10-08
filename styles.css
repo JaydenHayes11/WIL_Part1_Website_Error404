@@ -18,6 +18,93 @@ body {
     padding: 0 20px;
 }
 
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: space-between;
+}
+
+.button{
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 0, 102, 0);
+    transition: box-shadow 0.3s ease, transform 0.3s ease
+}
+.button:hover{
+    box-shadow: 0 10px 20px rgba(255, 0, 102, 0.5);
+    transform: translateY(-3px);
+}
+
+/*CourseBar*/
+.course-container {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 700px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navigation{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+.navigation li{
+    list-style: none;
+    position: relative;
+}
+
+.navigation li a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.navigation li.active a {
+    color: #1e3a8a;
+}
+
+.highlight{
+    position: absolute;
+    background: white;
+    height: 100%;
+    width: 120px;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.navigation li a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: #1e3a8a;
+    transition: 0.3s;
+}
+
+.navigation li a:hover::before{
+    width: 80%;
+}
+
+.navigation li.active a::before{
+    width: 0;
+}
+
 /* Navigation Styles */
 .navbar {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
@@ -1274,3 +1361,10 @@ html {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
