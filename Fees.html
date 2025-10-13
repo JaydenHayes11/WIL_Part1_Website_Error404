@@ -40,6 +40,108 @@
         </div>
     </nav>
 
+    <main class="container">
+
+            <h2 class="form-heading">Select Your Courses</h2>
+            <div class="courses-container">
+                <div class="course-section">
+                    <h3 class="section-title">Six-Month Courses</h3>
+                    <div class="course-list">
+                        <div class="course-item">
+                            <input type="checkbox" id="first-aid" name="course" value="1500" data-name="First Aid">
+                            <label for="first-aid">First Aid</label>
+                            <span class="price">R1,500</span>
+                        </div>
+                        <div class="course-item">
+                            <input type="checkbox" id="sewing" name="course" value="1500" data-name="Sewing">
+                            <label for="sewing">Sewing</label>
+                            <span class="price">R1,500</span>
+                        </div>
+                        <div class="course-item">
+                            <input type="checkbox" id="landscaping" name="course" value="1500" data-name="Landscaping">
+                            <label for="landscaping">LandScaping</label>
+                            <span class="price">R1,500</span>
+                        </div>
+                        <div class="course-item">
+                            <input type="checkbox" id="life-skills" name="course" value="1500" data-name="Life Skills">
+                            <label for="life-skills">Life Skills</label>
+                            <span class="price">R1,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-section">
+                    <h3 class="section-title">Six-Week Courses</h3>
+                    <div class="course-list">
+                        <div class="course-item">
+                            <input type="checkbox" id="child-minding" name="course" value="750" data-name="Child Minding">
+                            <label for="child-minding">Child Minding</label>
+                            <span class="price">R750</span>
+                        </div>
+                        <div class="course-item">
+                            <input type="checkbox" id="cooking" name="course" value="750" data-name="Cooking">
+                            <label for="cooking">Cooking</label>
+                            <span class="price">R750</span>
+                        </div>
+                        <div class="course-item">
+                            <input type="checkbox" id="garden-maintenance" name="course" value="750" data-name="Garden Maintenance">
+                            <label for="garden-maintenance">Garden Maintenance</label>
+                            <span class="price">R750</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="discount-section">
+                <h3>Automatic Discounts</h3>
+                <div class="discount-rules">
+                    <ul>
+                        <li>One course ] no discount</li>
+                        <li>Two courses ] 5% discount</li>
+                        <li>Three courses ] 10% discount</li>
+                        <li>More than three courses ] 15% discount</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calculator-section">
+                <button type="button" class="calculator-btn" onclick="calculateQuote()">Calculate Total Fee</button>
+                
+                <div id="quoteDisplay" class="quote-display" style="display: none;">
+                    <h3>Fee Quote</h3>
+                    <div class="selected-courses" id="selectedCourses"></div>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">R0.00</span>
+                        </div>
+                        <div class="price-row discount-row" id="discountRow" style="display: none;">
+                            <span>Discount (<span id="discountPercent">0</span>%):</span>
+                            <span id="discountAmount">-R0.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Amount after discount:</span>
+                            <span id="afterDiscount">R0.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>VAT (15%):</span>
+                            <span id="vat">R0.00</span>
+                        </div>
+                        <div class="price-row total-row">
+                            <span><strong>Total Quoted Fee:</strong></span>
+                            <span id="total"><strong>R0.00</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button  onclick="document.location='contact.html'" class="button">Speak with Consultant</button>
+            </div>
+        </form>
+
+    </main>
+
 
     <script src="script.js"></script>
 </body>
