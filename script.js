@@ -32,4 +32,3 @@ window.addEventListener('resize', () => {
   highlight.style.width = activeItem.offsetWidth + 'px';
   highlight.style.left = activeItem.offsetLeft + 'px';
 });
-
