@@ -11,11 +11,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
+                <img src="new logo.png" alt="Logo">
                 <h2>Empowering The Nation</h2>
             </div>
-            <div class="nav-logo">
-                <img src="new logo.png" alt="Logo" class="h-5 w-auto">
-            </div>
+            
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link active">Home</a>
@@ -65,7 +64,7 @@
                             <span>4.9</span>
                         </div>
                     </div>
-                    <button class="enroll-btn" onclick="enrollCourse('Six-Month Course')">Enroll Now - R1500</button>
+                    <button class="enroll-btn" onclick="document.location='FirstAid.html'">Enroll Now - R1500</button>
                 </div>
             </div>
 
@@ -83,7 +82,7 @@
                             <span>4.7</span>
                         </div>
                     </div>
-                    <button class="enroll-btn" onclick="enrollCourse('Six-Week Course')">Enroll Now - R750</button>
+                    <button class="enroll-btn" onclick="document.location='Child.html'">Enroll Now - R750</button>
                 </div>
             </div>
         </div>
@@ -107,40 +106,10 @@
 
         let currentSlides = { 'six-month': 0, 'six-week': 0 };
 
-        function toggleMenu() {
-            showNotification('Menu opened! (Demo feature)');
-        }
-
-        function showSignIn() {
-            document.getElementById('signInModal').style.display = 'block';
-        }
-
         function closeModal() {
             document.getElementById('signInModal').style.display = 'none';
         }
 
-        function handleSignIn(event) {
-            event.preventDefault();
-            showLoading();
-            setTimeout(() => {
-                hideLoading();
-                closeModal();
-                showNotification('Successfully signed in!');
-            }, 1500);
-        }
-
-        function searchCourses(query) {
-            const cards = document.querySelectorAll('.course-card');
-            cards.forEach(card => {
-                const title = card.querySelector('.course-title').textContent.toLowerCase();
-                if (title.includes(query.toLowerCase()) || query === '') {
-                    card.style.display = 'block';
-                    card.style.animation = 'fadeInUp 0.3s ease';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
 
         function nextSlide(courseType) {
             const courses = courseData[courseType];
