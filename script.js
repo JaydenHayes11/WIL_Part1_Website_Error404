@@ -3,19 +3,19 @@ const highlight = document.querySelector('.highlight');
 const items = document.querySelectorAll('.navigation li');
 
 
-        const courseData = {
-            'six-month': [
-                { title: 'First-Aid', duration: '24 weeks', level: 'Advanced', price: 'R1500' },
-                { title: 'Sewing', duration: '24 weeks', level: 'Advanced', price: 'R1500' },
-                { title: 'LandScaping', duration: '24 weeks', level: 'Advanced', price: 'R1500' },
-                { title: 'Life Skills', duration: '24 weeks', level: 'Advanced', price: 'R1500' }
-            ],
-            'six-week': [
-                { title: 'Child Minding', duration: '6 weeks', level: 'Beginner', price: 'R750' },
-                { title: 'Cooking', duration: '6 weeks', level: 'Intermediate', price: 'R750' },
-                { title: 'Garden Maintenance', duration: '6 weeks', level: 'Beginner', price: 'R750' }
-            ]
-        };
+const courseData = {
+    'six-month': [
+        { title: 'First-Aid', duration: '24 weeks', level: 'Advanced', price: 'R1500' },
+        { title: 'Sewing', duration: '24 weeks', level: 'Advanced', price: 'R1500' },
+        { title: 'LandScaping', duration: '24 weeks', level: 'Advanced', price: 'R1500' },
+        { title: 'Life Skills', duration: '24 weeks', level: 'Advanced', price: 'R1500' }
+   ],
+    'six-week': [
+        { title: 'Child Minding', duration: '6 weeks', level: 'Beginner', price: 'R750' },
+        { title: 'Cooking', duration: '6 weeks', level: 'Intermediate', price: 'R750' },
+        { title: 'Garden Maintenance', duration: '6 weeks', level: 'Beginner', price: 'R750' }
+    ]
+};
 
         let currentSlides = { 'six-month': 0, 'six-week': 0 };
 
