@@ -42,7 +42,8 @@
 
     <main class="container">
 
-        <h2 class="form-heading">Contact Details</h2>
+    <form id="registrationForm">
+    <h2 class="form-heading">Contact Details</h2>
             <div class="personal-info">
                 <input type="text" placeholder="Enter Full Name:" class="input-field full-name" id="fullName" required>
                 <input type="tel" placeholder="Enter Phone Number:" class="input-field phone-number" id="phoneNumber" required>
@@ -110,6 +111,11 @@
                     </ul>
                 </div>
             </div>
+            <div>
+                <div class="button-container">
+                    <button  onclick="document.location='contact.html'" class="button">Speak with Consultant</button>
+            </div>
+            </div>
 
             <div class="calculator-section">
                 <button type="button" class="calculator-btn" onclick="calculateQuote()">Calculate Total Fee</button>
@@ -142,9 +148,6 @@
                 </div>
             </div>
 
-            <div class="button-container">
-                <button  onclick="document.location='contact.html'" class="button">Speak with Consultant</button>
-            </div>
         </form>
 
     </main>
