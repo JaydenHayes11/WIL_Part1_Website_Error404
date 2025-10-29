@@ -20,20 +20,22 @@ The Website offers information about the type of courses the company empowering 
 <img src="images/new logo.png">
 
 ### Homepage
-<img src="images/homepage1.JPG">
-<img src="images/homepage2.JPG">
+<img src="images/homepage (2).jpg">
+
+### Coursepage
+<img src="images/Courses.jpg">
+
+### CourseInfopage
+<img src="images/CourseInfo.jpg">
 
 ### Aboutpage
-<img src="images/aboutpage.JPG">
-<img src="images/aboutpage2.JPG">
+<img src="images/About.jpg">
 
 ### Contactpage
-<img src="images/contactpage.JPG">
-<img src="images/contactpage2.JPG">
+<img src="images/Contact.jpg">
 
 ### Checkoutpage
-<img src="images/checkoutpage.JPG">
-<img src="images/checkoutpage2.JPG">
+<img src="images/Checkout.jpg">
 
 
 
